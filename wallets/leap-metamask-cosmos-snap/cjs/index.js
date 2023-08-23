@@ -15,5 +15,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./extension"), exports);
-__exportStar(require("./leap"), exports);
+__exportStar(require("./leap-metamask-cosmos-snap"), exports);
 //# sourceMappingURL=index.js.map

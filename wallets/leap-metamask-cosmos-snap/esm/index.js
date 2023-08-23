@@ -1,3 +1,3 @@
 export * from './extension';
-export * from './leap';
+export * from './leap-metamask-cosmos-snap';
 //# sourceMappingURL=index.js.map
