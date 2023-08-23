@@ -1,0 +1,1 @@
+{"version":3,"file":"registry.js","sourceRoot":"","sources":["../../src/web-usb-hid/registry.ts"],"names":[],"mappings":";;;AACA,0CAAmC;AAEtB,QAAA,UAAU,GAAW;IAChC,IAAI,EAAE,oBAAoB;IAC1B,UAAU,EAAE,QAAQ;IACpB,IAAI,EAAE,eAAI;IACV,IAAI,EAAE,QAAQ;IACd,cAAc,EAAE,IAAI;IACpB,aAAa,EAAE;QACb,MAAM,EAAE,kBAAkB;KAC3B;CACF,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"chain-wallet.js","sourceRoot":"","sources":["../../src/wallet-connect/chain-wallet.ts"],"names":[],"mappings":";;;AACA,6DAAoD;AACpD,qCAAsC;AAEtC,MAAa,eAAgB,SAAQ,uBAAO;IAC1C,YAAY,UAAkB,EAAE,SAAsB;QACpD,KAAK,CAAC,UAAU,EAAE,SAAS,EAAE,mBAAU,CAAC,CAAC;IAC3C,CAAC;CACF;AAJD,0CAIC"}
