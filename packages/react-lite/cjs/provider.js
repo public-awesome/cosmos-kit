@@ -5,9 +5,9 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 const core_1 = require("@cosmos-kit/core");
 const react_1 = require("react");
 exports.walletContext = (0, react_1.createContext)(null);
-function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors = false, defaultNameService = 'icns', walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel = 'WARN', children, }) {
+function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors = false, subscribeConnectEvents = true, defaultNameService = 'icns', walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel = 'WARN', children, }) {
     const logger = (0, react_1.useMemo)(() => new core_1.Logger(logLevel), []);
-    const walletManager = (0, react_1.useMemo)(() => new core_1.WalletManager(chains, assetLists, wallets, logger, throwErrors, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions), []);
+    const walletManager = (0, react_1.useMemo)(() => new core_1.WalletManager(chains, assetLists, wallets, logger, throwErrors, subscribeConnectEvents, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions), []);
     const [isViewOpen, setViewOpen] = (0, react_1.useState)(false);
     const [viewWalletRepo, setViewWalletRepo] = (0, react_1.useState)();
     const [, setData] = (0, react_1.useState)();

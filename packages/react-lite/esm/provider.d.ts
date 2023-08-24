@@ -5,12 +5,13 @@ export declare const walletContext: import("react").Context<{
     walletManager: WalletManager;
     modalProvided: boolean;
 }>;
-export declare function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel, children, }: {
+export declare function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors, subscribeConnectEvents, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel, children, }: {
     chains: Chain[];
     assetLists: AssetList[];
     wallets: MainWalletBase[];
     walletModal?: (props: WalletModalProps) => JSX.Element;
     throwErrors?: boolean;
+    subscribeConnectEvents?: boolean;
     defaultNameService?: NameServiceName;
     walletConnectOptions?: WalletConnectOptions;
     signerOptions?: SignerOptions;

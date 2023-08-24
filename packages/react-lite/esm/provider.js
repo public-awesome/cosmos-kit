@@ -2,9 +2,9 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Logger, State, WalletManager, } from '@cosmos-kit/core';
 import { createContext, useEffect, useMemo, useState } from 'react';
 export const walletContext = createContext(null);
-export function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors = false, defaultNameService = 'icns', walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel = 'WARN', children, }) {
+export function ChainProvider({ chains, assetLists, wallets, walletModal: ProvidedWalletModal, throwErrors = false, subscribeConnectEvents = true, defaultNameService = 'icns', walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel = 'WARN', children, }) {
     const logger = useMemo(() => new Logger(logLevel), []);
-    const walletManager = useMemo(() => new WalletManager(chains, assetLists, wallets, logger, throwErrors, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions), []);
+    const walletManager = useMemo(() => new WalletManager(chains, assetLists, wallets, logger, throwErrors, subscribeConnectEvents, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions), []);
     const [isViewOpen, setViewOpen] = useState(false);
     const [viewWalletRepo, setViewWalletRepo] = useState();
     const [, setData] = useState();

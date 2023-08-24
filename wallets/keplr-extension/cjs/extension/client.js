@@ -28,6 +28,7 @@ class KeplrClient {
     }
     async getAccount(chainId) {
         const key = await this.client.getKey(chainId);
+        console.log('%cclient.ts line:45 key', 'color: #007acc;', key);
         return {
             username: key.name,
             address: key.bech32Address,
@@ -55,10 +56,12 @@ class KeplrClient {
     async addChain(chainInfo) {
         const suggestChain = (0, keplr_1.chainRegistryChainToKeplr)(chainInfo.chain, chainInfo.assetList ? [chainInfo.assetList] : []);
         if (chainInfo.preferredEndpoints?.rest?.[0]) {
-            suggestChain.rest = chainInfo.preferredEndpoints?.rest?.[0];
+            suggestChain.rest =
+                chainInfo.preferredEndpoints?.rest?.[0];
         }
         if (chainInfo.preferredEndpoints?.rpc?.[0]) {
-            suggestChain.rpc = chainInfo.preferredEndpoints?.rpc?.[0];
+            suggestChain.rpc =
+                chainInfo.preferredEndpoints?.rpc?.[0];
         }
         await this.client.experimentalSuggestChain(suggestChain);
     }

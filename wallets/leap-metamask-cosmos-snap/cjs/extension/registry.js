@@ -4,6 +4,7 @@ exports.metamaskCosmosSnapInfo = void 0;
 const constant_1 = require("../constant");
 exports.metamaskCosmosSnapInfo = {
     name: 'leap-metamask-cosmos-snap',
+    description: 'The Leap MetaMask Cosmos Snap allows signing of Cosmos transactions using MetaMask.',
     prettyName: 'Leap Metamask Cosmos Snap',
     logo: constant_1.ICON,
     mode: 'extension',

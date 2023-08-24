@@ -3,13 +3,14 @@ import { EndpointOptions, LogLevel, MainWalletBase, NameServiceName, SessionOpti
 import { ReactNode } from 'react';
 import { ThemeCustomizationProps } from './modal';
 import { defaultModalViews } from './modal/components/views';
-export declare const ChainProvider: ({ chains, assetLists, wallets, walletModal, modalViews, throwErrors, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel, children, modalTheme, }: {
+export declare const ChainProvider: ({ chains, assetLists, wallets, walletModal, modalViews, throwErrors, subscribeConnectEvents, defaultNameService, walletConnectOptions, signerOptions, endpointOptions, sessionOptions, logLevel, children, modalTheme, }: {
     chains: Chain[];
     assetLists: AssetList[];
     wallets: MainWalletBase[];
     walletModal?: (props: WalletModalProps) => JSX.Element;
     modalViews?: typeof defaultModalViews;
     throwErrors?: boolean;
+    subscribeConnectEvents?: boolean;
     defaultNameService?: NameServiceName;
     walletConnectOptions?: WalletConnectOptions;
     signerOptions?: SignerOptions;
