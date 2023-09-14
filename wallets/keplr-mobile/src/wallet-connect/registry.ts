@@ -15,8 +15,7 @@ export const keplrMobileInfo: Wallet = {
     {
       device: 'mobile',
       os: 'android',
-      link:
-        'https://play.google.com/store/apps/details?id=com.chainapsis.keplr&hl=en&gl=US&pli=1',
+      link: 'https://play.google.com/store/apps/details?id=com.chainapsis.keplr&hl=en&gl=US&pli=1',
     },
     {
       device: 'mobile',
@@ -47,13 +46,18 @@ export const keplrMobileInfo: Wallet = {
     ): string => {
       const plainAppUrl = appUrl.replaceAll('/', '').replaceAll(':', '');
       const encodedWcUrl = encodeURIComponent(wcUri);
+
+      const baseUrl = `${plainAppUrl}://wcV2?${encodedWcUrl}`;
+
+      console.log({ os, plainAppUrl, encodedWcUrl });
+
       switch (os) {
         case 'ios':
-          return `${plainAppUrl}://wcV2?${encodedWcUrl}`;
+          return baseUrl;
         case 'android':
-          return `${plainAppUrl}://wcV2?${encodedWcUrl}#Intent;package=com.chainapsis.keplr;scheme=keplrwallet;end;`;
+          return `${baseUrl}#Intent;package=com.chainapsis.keplr;scheme=keplrwallet;end;`;
         default:
-          return `${plainAppUrl}://wcV2?${encodedWcUrl}`;
+          return baseUrl;
       }
     },
   },

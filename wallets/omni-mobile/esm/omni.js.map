@@ -1,0 +1,1 @@
+{"version":3,"file":"omni.js","sourceRoot":"","sources":["../src/omni.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,UAAU,CAAC;AAC9C,OAAO,EAAE,cAAc,EAAE,gBAAgB,EAAE,MAAM,kBAAkB,CAAC;AAEpE,MAAM,UAAU,GAAG,IAAI,gBAAgB,CAAC,cAAc,EAAE,kBAAkB,CAAC,CAAC;AAE5E,MAAM,CAAC,MAAM,OAAO,GAAG,CAAC,UAAU,CAAC,CAAC"}
